@@ -79,10 +79,11 @@
 /* Navbar Styles */
 .lawyer-navbar {
   background-color: hsl(var(--lawyer-white)) !important;
-  box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+  box-shadow: 0 2px 10px rgba(0,0,0,0.15);
   padding: 1rem 0;
   transition: all 0.3s ease;
   z-index: 1030;
+  border-bottom: 2px solid hsl(var(--lawyer-secondary));
 }
 
 .lawyer-navbar-brand {
@@ -94,14 +95,19 @@
 .lawyer-nav-link {
   font-weight: 600;
   color: hsl(var(--lawyer-text)) !important;
-  margin: 0 10px;
-  transition: color 0.3s ease;
+  margin: 0 15px;
+  padding: 8px 16px;
+  transition: all 0.3s ease;
   text-decoration: none;
   position: relative;
+  font-size: 1.1rem;
+  border-radius: 6px;
 }
 
 .lawyer-nav-link:hover {
   color: hsl(var(--lawyer-secondary)) !important;
+  background-color: hsl(var(--lawyer-background));
+  transform: translateY(-1px);
 }
 
 .lawyer-nav-link::after {
