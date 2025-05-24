@@ -82,6 +82,7 @@
   box-shadow: 0 2px 10px rgba(0,0,0,0.1);
   padding: 1rem 0;
   transition: all 0.3s ease;
+  z-index: 1030;
 }
 
 .lawyer-navbar-brand {
@@ -95,10 +96,46 @@
   color: hsl(var(--lawyer-text)) !important;
   margin: 0 10px;
   transition: color 0.3s ease;
+  text-decoration: none;
+  position: relative;
 }
 
 .lawyer-nav-link:hover {
   color: hsl(var(--lawyer-secondary)) !important;
+}
+
+.lawyer-nav-link::after {
+  content: '';
+  position: absolute;
+  width: 0;
+  height: 2px;
+  bottom: -5px;
+  left: 50%;
+  background-color: hsl(var(--lawyer-secondary));
+  transition: all 0.3s ease;
+  transform: translateX(-50%);
+}
+
+.lawyer-nav-link:hover::after {
+  width: 100%;
+}
+
+/* Mobile navbar improvements */
+@media (max-width: 991px) {
+  .lawyer-navbar .navbar-nav {
+    text-align: center;
+    padding: 1rem 0;
+  }
+  
+  .lawyer-nav-link {
+    margin: 5px 0;
+    padding: 10px 20px;
+    border-radius: 5px;
+  }
+  
+  .lawyer-nav-link:hover {
+    background-color: hsl(var(--lawyer-background));
+  }
 }
 
 /* Hero Section */
